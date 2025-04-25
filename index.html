@@ -12,418 +12,512 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Fixed background for the entire page that doesn't scroll */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -20;
+            background: linear-gradient(140deg, 
+                        rgba(247, 188, 240, 0.3) 0%, 
+                        rgba(220, 210, 230, 0.25) 40%,
+                        rgba(200, 220, 220, 0.25) 70%, 
+                        rgba(180, 228, 184, 0.3) 100%);
+            pointer-events: none;
+        }
+        
+        .intro-section {
+            background: linear-gradient(to bottom, 
+                      rgba(247, 188, 240, 0.05) 0%,
+                      rgba(247, 188, 240, 0.1) 20%,
+                      rgba(240, 195, 235, 0.15) 40%,
+                      rgba(230, 200, 230, 0.12) 70%,
+                      rgba(220, 205, 225, 0.08) 85%, 
+                      rgba(210, 210, 220, 0.05) 92%,
+                      rgba(195, 215, 220, 0.03) 96%,
+                      rgba(180, 228, 184, 0.02) 100%);
+            width: 100%;
+            padding-bottom: 60px;
+            padding-top: 80px;
+            position: relative;
+        }
+        
+        .intro-section::after {
+            display: none;
+        }
+        
+        .projects-section {
+            background: linear-gradient(to bottom,
+                      rgba(180, 228, 184, 0.02) 0%,
+                      rgba(185, 225, 190, 0.03) 4%,
+                      rgba(190, 220, 195, 0.05) 8%,
+                      rgba(190, 218, 200, 0.07) 15%,
+                      rgba(180, 228, 184, 0.1) 30%,
+                      rgba(180, 228, 184, 0.1) 100%);
+            width: 100%;
+            padding-top: 60px;
+            margin-top: -40px;
+            position: relative;
+        }
+        
+        .content-container {
+            position: relative;
+        }
+        
+        /* Style to move name up and add more emphasis */
+        td[width="65%"] p:first-child {
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+        
+        /* Ensure name has proper styling */
+        n {
+            font-family: 'Lato', Arial, sans-serif;
+            font-size: 36px;
+            color: #333333;
+            line-height: 1.8;
+        }
+        
+        /* Additional blending element */
+        .blend-helper {
+            position: absolute;
+            height: 80px;
+            width: 100%;
+            top: -40px;
+            left: 0;
+            background: linear-gradient(to bottom,
+                rgba(200, 210, 220, 0.02) 0%,
+                rgba(190, 218, 200, 0.02) 50%,
+                rgba(180, 225, 190, 0.02) 100%);
+            z-index: 5;
+        }
+    </style>
 </head>
 
 
 <body>
-    
-    <table width="1000" border="0" align="center" cellspacing="0" cellpadding="0">
-        <tr>
-        <td>
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+    <div class="content-container">
+        <div class="intro-section">
+            <table width="1000" border="0" align="center" cellspacing="0" cellpadding="0">
+                <tr>
+                <td>
+                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="30%" valign="left" style="padding-right: 30px;">
+                            <a href="/img/profile.jpg"><img style="width:90%;max-width:90%;border-radius: 20px;" alt="profile photo" src="/img/profile.jpg" class="hoverZoomLink"></a>
+                        </td>
+                        <td width="65%" valign="right">
+                            <p style="text-align:center">
+                                <name>Maryana Smirnova</name>
+                            </p>
+                            <p>
+                            Hi there! I'm an <em>AI explorer with a builder's mindset</em>. I studied <b>Artificial Intelligence</b> at <a href="https://th-deg.de/" target="_blank">Deggendorf Institute of Technology</a>, focusing on bringing AI into the real world — especially through <b>Robotics</b> and <b>Sensor Fusion</b>.
+                            <br><br>
+
+                            At <a href="https://www.bayer.com/en/" target="_blank">Bayer AG</a> (<em>Computational Life Science/Formulation Technology</em>), I built <b>deep learning models</b> to predict chemical formulations. At <a href="https://refresh.by/" target="_blank">Refresh K LLC</a>, I developed <b>backend tools</b> for smart data flows and <b>automated document handling</b>.
+                            <br><br>
+
+                            Now, I'm all-in on a startup: <b><a href="https://interviewninja.one/" target="_blank">Interview Ninja</a></b>. It's a <em>real-time assistant</em> for job interviews. Not prep — <em>leverage</em>. It helps clever minds beat performative hiring games and show their <b>real value</b>.                        
+                            <br><br>
+                            
+                            I believe in <b>AI that's practical, fast, and human-centered</b>. It should break barriers — not build them. That's the kind of tech I build. That's what drives me.
+                            <br><br>
+            
+                            <p style="text-align:center">
+                            <a href="mailto:11.smirnova.maryana@gmail.com">Email</a> &nbsp/&nbsp
+                            <a href="https://www.linkedin.com/in/maryana-smirnova-588600266/">LinkedIn</a> &nbsp/&nbsp
+                            <a href="https://github.com/Melodiase">Github</a>
+                            </p>
+                            </p>
+                        </td>
+                    </tr>
+                    </table>
+                </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="projects-section">
+            <div class="blend-helper"></div>
+            <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
             <tr>
-                <td width="30%" valign="left" style="padding-right: 30px;">
-                    <a href="/img/profile.jpg"><img style="width:90%;max-width:90%;border-radius: 20px;" alt="profile photo" src="/img/profile.jpg" class="hoverZoomLink"></a>
-                </td>
-                <td width="65%" valign="right">
-                    <p style="text-align:center">
-                        <name>Maryana Smirnova</name>
-                    </p>
-                    <p>
-                        I'm Maryana, an AI explorer with a builder's mindset. I studied Artificial Intelligence at Deggendorf Institute of Technology, where I focused on bringing AI into the real world,  especially through robotics and data modeling. I've worked with practical tools across computer vision, classical geometry and data pipelines to solve problems that connect algorithms with the physical world.                    
-                    <br><br>
+            <td>
+                <h2> My Projects </h2>
+                <hr>
 
-                    At Bayer AG, I interned as a Data Scientist, working on predictive model for chemical formulations. I combined experimental lab data with machine learning to generate insights that actually helped improve outcomes. That experience showed me what AI can do when it's grounded in real context.
-                    <br><br>
+                <!-- <h3>Computer Vision</h3> -->
 
-                    Since graduating, I've shifted my focus to a startup project that's now my full-time mission. Welcome Interview Ninja— a real-time assistant that helps people hack job interviews as they happen. It's built for smart, capable minds who get boxed out by outdated norms and performative hiring games. This isn't prep — it's leverage. A tool that quietly flips the script, giving clever people the edge they need to show their true value.                        
-                    <br><br>
-                    
-                    I believe AI should be practical, fast, and human-centered. It should break down barriers and create access. That's what I'm building — and that's what drives me every day.
-                    <br><br>
-    
-                    <p style="text-align:center">
-                    <a href="mailto:11.smirnova.maryana@gmail.com">Email</a> &nbsp/&nbsp
-                    <a href="https://www.linkedin.com/in/maryana-smirnova/">LinkedIn</a> &nbsp/&nbsp
-                    <a href="https://github.com/Melodiase">Github</a>
-                    </p>
-                    </p>
-                </td>
+                <br>
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/interview-ninja-logo.png" width="70%" style="border-radius: 2%;" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Interview Ninja</papertitle>
+                                <br>
+                            Nail interviews with ease
+                            <br>
+                            Supabase / JavaScript / TailWind
+                            <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/poster_v8.jpg" style="width: 70%; height: 280px; object-fit: cover; border-radius: 4%;">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>High Performance Computing Frameworks comparison</papertitle>
+                                <br>
+                            FUT3CH Symposium 2025
+                            <br>
+                            HPC / Performance Portability / CUDA / HIP / RAJA / Kokkos / OpenMP
+                            <br>
+                            Max Planck
+                            <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/lawn_robot_exterior.jpg" width="70%" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Autonomous Grasscutter</papertitle>
+                                <br>
+                            Sensor fusion, GPS naviganion with RTK
+                            <br>
+                            Raspberry Pi / C++ / RTK / Parking Sensors / Path Planning
+                            <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/robot_parts_box.jpg" width="70%" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Robotic Arm Mirobot</papertitle>
+                                <br>
+                            VLM for general tasks execution from real-time video RGB and depth input
+                            <br>
+                            Mirobot / Reinforcement Learning / VLM
+                            <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/screenshot_gazebo.png" style="width: 70%; object-fit: cover; border-radius: 4%;">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle> TurtleBot Maze Runner</papertitle>
+                                <br>
+                                Robot with maze-solving algorithms utilizing LiDAR and
+                                <br>
+                                LiDAR / ROS / Gazebo / Path Planning
+                                <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/neon_cube_game.jpg" width="70%" alt="Neon Cube Icon" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Neon Cube</papertitle>
+                                <br>
+                                Mobile game available on PlayMarket with 150+ downloads. 
+                                <br>
+                                Used SmartShape2D &amp; Aseprite for art assets, Admob for monetization, and Firebase for score management.
+                                <br>
+                                Godot | GDScript | SmartShape2D | Aseprite | Firebase | Admob
+                                <br>
+                                <a href="https://kippishon.itch.io/neon-square">[itch.io]</a>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/jetbot.gif" width="70%" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Gesture-Controlled JetBot NVIDIA</papertitle>
+                                <br>
+                                Mobile robot with gesture-driven interaction.
+                                <br>
+                                NVIDIA Jetson Nano / PyTorch / YOLOv8
+                                <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/carla3.png" width="70%"  style="border-radius: 2%;" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>B Plus - Label Error detection</papertitle>
+                                <br>
+                                Detect label errors in autonomous driving datasets
+                                <br>
+                                CARLA Simulator / Object Detection / Deep Learning 
+                                <br>
+                                <!-- <a href="html/bplus.html">[webpage]</a> -->
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/echoes_of_survival.png" width="70%" alt="Echoes of Survival Icon" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Echoes of Survival</papertitle>
+                                <br>
+                                An RPG-style narative adventure game with VN spice developed in Godot. 
+                                <br>
+                                Godot / GDScript / Aseprite
+                                <br>
+                                <a href="https://maryana-smirnova.itch.io/echoes-of-survival">[itch.io]</a>
+                                <!-- <a href="html/neon-cube.html">[webpage]</a> -->
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+               
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/speech_assistant.png" width="70%" style="border-radius: 2%;" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Speech University Mensa assistant</papertitle>
+                                <br>
+                                Speech Assistant system for the DIT university canteen.
+                                <br>
+                                Rasa / Python / API / Docker / NLP / System Design
+                                <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <!-- Cooking Recipes Management System -->
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/recipes_design.png" width="70%"  style="border-radius: 2%;" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Recipes Management app</papertitle>
+                                <br>
+                                Web application to manage cooking recipes, users, and user-recipe information. 
+                                <br>Java Spring / MongoDB / Scrum
+                                <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <!-- Diophantine Equations Solver -->
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/ebnf.png" width="70%" style="border-radius: 2%;" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Diophantine Equations Solver</papertitle>
+                                <br>
+                                Z3-based program for solving Diophantine equations with constraints. 
+                                <br>Z3 / Python / BNF Grammar
+                                <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <!-- Auction Car Prices Prediction -->
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/secondary_screen_cars.png" width="70%" style="border-radius: 2%;" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Car Price Prediction app</papertitle>
+                                <br>
+                                PyQt6-based decision system for predicting used car prices
+                                <br>Scikit-learn / Pandas / Numpy / Kaggle / Data Analysis
+                                <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <!-- Gnosis ChatBot -->
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/gnosis.png" width="70%" style="border-radius: 2%;" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Pizza ChatBot</papertitle>
+                                <br>
+                                Conversational bot for ordering pizza.
+                                <br>Node.js / React / Microsoft LUIS / Microsoft Azure
+                                <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <!-- Solving Blackjack with Reinforcement Learning -->
+                <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:35%; vertical-align:middle; padding-right: 20px;">
+                            <div class="image-container">
+                                <img src="img/blackjack.png" width="70%" style="border-radius: 2%;" class="project-img">
+                            </div>
+                        </td>
+                        <td style="width:65%; vertical-align:middle">
+                            <papertext>
+                                <papertitle>Reinforcement Learning in Blackjack</papertitle>
+                                <br>
+                                Reinforcement learning agent for Blackjack strategy.
+                                <br>Reinforcement Learning / Q-learning
+                                <br>
+                            </papertext>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+
+            </td>
             </tr>
             </table>
-        </td>
-        </tr>
-    </table>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
+            <tr>
+            <td>
         
-    <br>
-
-    <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-    <td>
-        <h2> My Projects </h2>
-        <hr>
-
-        <!-- <h3>Computer Vision</h3> -->
-
-        <br>
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/easy_knowledge.png" width="70%" style="border-radius: 2%;" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Interview Ninja</papertitle>
-                        <br>
-                    Nail interviews with ease
-                    <br>
-                    Supabase, JavaScript, TailWind
-                    <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-        
-        <br>
-
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/poster_v8.jpg" style="width: 70%; height: 280px; object-fit: cover; border-radius: 4%;">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>High Performance Computing Frameworks comparison</papertitle>
-                        <br>
-                    FUT3CH Symposium 2025
-                    <br>
-                    HPC, Performance Portability, CUDA, HIP, RAJA, Kokkos, OpenMP
-                    <br>
-                    Max Planck
-                    <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/lawn_robot_exterior.jpg" width="70%" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Autonomous Lawn Mower RTK & Navigation</papertitle>
-                        <br>
-                    RTK GPS for precise navigation and obstacle avoidance using Parking Sensors
-                    <br>
-                    Raspberry Pi, C++, RTK, Parking Sensors
-                    <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/robot_parts_box.jpg" width="70%" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Robotic Arm Mirobot</papertitle>
-                        <br>
-                    VLM for general tasks execution from real-time video RGB and depth input
-                    <br>
-                    Mirobot, Reinforcement Learning, VLM
-                    <br>
-                    </papertext>
-                </td>
+                <p align="right">
+                    Website template from <a href="https://github.com/jonbarron/website">Jon Barron</a> and <a href="https://mxu34.github.io/">Mengdi Xu</a>.
+                </p>
+                
+            </td>
             </tr>
         </table>
         <br>
-
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/screenshot_gazebo.png" style="width: 70%; object-fit: cover; border-radius: 4%;">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle> TurtleBot Maze Runner</papertitle>
-                        <br>
-                        Robot with maze-solving algorithms utilizing LiDAR and
-                        <br>
-                        LiDAR, ROS, Gazebo, Path Planning
-                        <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/neon_cube_game.jpg" width="70%" alt="Neon Cube Icon" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Neon Cube</papertitle>
-                        <br>
-                        Mobile game available on PlayMarket with 150+ downloads. 
-                        <br>
-                        Used SmartShape2D &amp; Aseprite for art assets, Admob for monetization, and Firebase for score management.
-                        <br>
-                        Godot | GDScript | SmartShape2D | Aseprite | Firebase | Admob
-                        <br>
-                        <a href="https://kippishon.itch.io/neon-square">[itch.io]</a>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/jetbot.gif" width="70%" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Gesture-Controlled JetBot NVIDIA</papertitle>
-                        <br>
-                        Mobile robot with gesture-driven interaction.
-                        <br>
-                        NVIDIA Jetson Nano, PyTorch, YOLOv8
-                        <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/carla3.png" width="70%"  style="border-radius: 2%;" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>B Plus - Label Error detection</papertitle>
-                        <br>
-                        Detect label errors in autonomous driving datasets
-                        <br>
-                        CARLA Simulator, Object Detection, Deep Learning 
-                        <br>
-                        <!-- <a href="html/bplus.html">[webpage]</a> -->
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/echoes_of_survival.png" width="70%" alt="Echoes of Survival Icon" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Echoes of Survival</papertitle>
-                        <br>
-                        An RPG-style narative adventure game with VN spice developed in Godot. 
-                        <br>
-                        Godot, GDScript, Aseprite
-                        <br>
-                        <a href="https://maryana-smirnova.itch.io/echoes-of-survival">[itch.io]</a>
-                        <!-- <a href="html/neon-cube.html">[webpage]</a> -->
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-       
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/speech_assistant.png" width="70%" style="border-radius: 2%;" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Speech University Mensa assistant</papertitle>
-                        <br>
-                        Speech Assistant system for the DIT university canteen.
-                        <br>
-                        Rasa, Python, API, Docker, NLP, System Design
-                        <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-
-        <!-- Cooking Recipes Management System -->
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/recipes_design.png" width="70%"  style="border-radius: 2%;" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Recipes Management app</papertitle>
-                        <br>
-                        Web application to manage cooking recipes, users, and user-recipe information. 
-                        <br>Java Spring, MongoDB, Scrum, 
-                        <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-
-        <!-- Diophantine Equations Solver -->
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/ebnf.png" width="70%" style="border-radius: 2%;" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Diophantine Equations Solver</papertitle>
-                        <br>
-                        Z3-based program for solving Diophantine equations with constraints. 
-                        <br>Z3, Python, BNF Grammar
-                        <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-
-        <!-- Auction Car Prices Prediction -->
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/secondary_screen_cars.png" width="70%" style="border-radius: 2%;" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Car Price Prediction app</papertitle>
-                        <br>
-                        PyQt6-based decision system for predicting used car prices
-                        <br>Scikit-learn, Pandas, Numpy, Kaggle, Data Analysis
-                        <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-
-        <!-- Gnosis ChatBot -->
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/gnosis.png" width="70%" style="border-radius: 2%;" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Pizza ChatBot</papertitle>
-                        <br>
-                        Conversational bot for ordering pizza.
-                        <br>Node.js, React, Microsoft LUIS, Microsoft Azure
-                        <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-
-        <!-- Solving Blackjack with Reinforcement Learning -->
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="width:35%; vertical-align:middle; padding-right: 20px;">
-                    <div class="image-container">
-                        <img src="img/blackjack.png" width="70%" style="border-radius: 2%;" class="project-img">
-                    </div>
-                </td>
-                <td style="width:65%; vertical-align:middle">
-                    <papertext>
-                        <papertitle>Reinforcement Learning in Blackjack</papertitle>
-                        <br>
-                        Reinforcement learning agent for Blackjack strategy.
-                        <br>Reinforcement Learning, Q-learning
-                        <br>
-                    </papertext>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-
-
-    </td>
-    </tr>
-    </table>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
-        <tr>
-        <td>
-    
-            <p align="right">
-                Website template from <a href="https://github.com/jonbarron/website">Jon Barron</a> and <a href="https://mxu34.github.io/">Mengdi Xu</a>.
-            </p>
-            
-        </td>
-        </tr>
-    </table>
-    <br>
+        </div> <!-- Close projects-section -->
+    </div> <!-- Close content-container -->
 </body>
 
 </html>
